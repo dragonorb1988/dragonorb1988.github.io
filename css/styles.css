@@ -1,0 +1,189 @@
+/* Your Website Styles */
+
+
+/* Show Grid */
+
+.showgrid {
+	background: url("../img/grid-bg.png") repeat-y;
+}
+
+#header{
+	padding-top:10px;
+	background-color: #fec04c;
+}
+#article{
+	padding-top: 50px;
+	background:-webkit-gradient(radial, 165 -70, 669, 220 -257, 465, from(#866453), to(#808080))
+}
+#footer{
+	padding-top: 20px;
+	background-color: #ffecce;
+}
+#jobtitle{
+	color:gray;
+	font-family: 'Lobster', cursive;
+	font-size: 16px;
+}
+#greeting{
+	margin-left: -100px;
+	margin-top: 50px;
+	text-align: center;
+}
+#greeting1{
+	font-size: 70px;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-animation: cssAnimationa 4s infinite;
+}
+@-webkit-keyframes cssAnimationa {
+from { -webkit-transform: scale(0); }
+to { -webkit-transform:scale(1); }
+}
+#greeting2{
+	font-size: 40px;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-animation: cssAnimation 4s infinite;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: translate(400px); }
+to { -webkit-transform:translate(0); }
+}
+#youtubeclip{
+
+	background-color: #7e5959;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #f8f5ef;
+	max-width:470px;
+}
+#youtubeclip iframe{
+	margin:10px
+}
+#my{
+
+	background-color: #7e5959;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #f8f5ef;
+	max-width:310px;
+}
+#my img{
+	width:90%;
+	border-style: none;
+	margin:10px;
+}
+#my img:hover{
+	position: absolute;
+	width:30%;
+	z-index: 999;
+}
+#home:hover{
+	background: url(../img/home.png);
+	background-repeat: no-repeat;
+}
+#resume:hover{
+	background: url(../img/resume.png);
+	background-repeat: no-repeat;
+}
+#portfolio:hover{
+	background: url(../img/portfolio.png);
+	background-repeat: no-repeat;
+}
+nav{
+	padding-top: 30px;
+}
+#header a{
+	color: gray;
+}
+#header a:link {
+	text-decoration:none;
+	font-family: 'Arvo', serif;
+	font-size: 30px;
+	margin-left: 20px;
+	padding-left: 45px;
+}
+#header a:hover{
+	color: #e3e15b;
+}
+#header a:active	{
+	color: gray;
+}
+
+
+header h1{
+	font-family: 'Arvo', serif;
+	text-transform: capitalize;
+	font-size: 40px;
+	margin-bottom: -10px;
+}
+img{
+	width:80%;
+	background-color: #f8f5ef;
+	padding:5px;
+}
+
+#footer img{
+	background: none;
+	width:12%;
+	height:12%;
+	float:left;
+}
+#footer a{
+	color: black;
+	text-decoration:none;	
+}
+#footer a:active{
+	color: black
+}
+#footer a:link{
+	color: black
+}
+
+h3{
+	text-align: center;
+	color:gray;
+	background-color: #f8f5ef;
+	padding:5px;
+	
+}
+p{
+	padding-left:8px;
+	padding-right:8px;
+}
+
+
+@media (max-width: 600px) {
+
+	header div:nth-child(1){	
+		width: 600px;		
+	}
+	nav a{
+		width: 600px;
+	}
+	.mypic{
+		visibility: hidden;
+	}
+	#my{
+		width:600px;
+	}
+	#footer{
+		display: none;
+	}
+	#greeting2{
+		font-size: 20px;
+		padding-left:100px;
+	}
+	#home:hover{
+		background: none;
+	}
+	#resume:hover{
+		background: none;
+	}
+	#portfolio:hover{
+		background: none;
+	}
+	#my img:hover{
+		position: relative;
+		width:90%;
+		z-index: 0;		
+	}
+}
