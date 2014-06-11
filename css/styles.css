@@ -35,8 +35,8 @@
 	-webkit-animation: cssAnimationa 4s infinite;
 }
 @-webkit-keyframes cssAnimationa {
-from { -webkit-transform: scale(0); }
-to { -webkit-transform:scale(1); }
+	from { -webkit-transform: scale(0); }
+	to { -webkit-transform:scale(1); }
 }
 #greeting2{
 	font-size: 40px;
@@ -44,8 +44,8 @@ to { -webkit-transform:scale(1); }
 	-webkit-animation: cssAnimation 4s infinite;
 }
 @-webkit-keyframes cssAnimation {
-from { -webkit-transform: translate(400px); }
-to { -webkit-transform:translate(0); }
+	from { -webkit-transform: translate(400px); }
+	to { -webkit-transform:translate(0); }
 }
 #youtubeclip{
 
@@ -151,7 +151,7 @@ p{
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
 
 	header div:nth-child(1){	
 		width: 600px;		
@@ -185,5 +185,12 @@ p{
 		position: relative;
 		width:90%;
 		z-index: 0;		
+	}
+	iframe{
+		width:300px;
+		height:169px;
+	}
+	#youtubeclip{
+		width: 400px;
 	}
 }
