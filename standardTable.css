@@ -1,0 +1,70 @@
+.standardTable{
+    width: 100%;
+}
+
+.standardTable tr:first-child, .standardTable .tr:first-child{
+    cursor: text;
+}
+.standardTable tr, .standardTable .tr{
+    cursor: pointer;
+}
+
+.standardTable tr:first-child:hover, .standardTable .tr:first-child:hover{
+   color: black;  
+}
+
+.standardTable tr:hover, .standardTable .tr:hover{
+    background-color: #201C1C !important;
+    color: white;
+    transition: all 0.3s;
+}
+
+.standardTable tr th, .standardTable .tr .th{
+    font-size: 1.5em;
+    background-color:aliceblue;
+    padding: 0.5em;
+}
+
+.standardTable tr td, .standardTable .tr .td{    
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+.standardTable tr:nth-child(odd), .standardTable .tr:nth-child(odd){
+    background-color:#DEDEDE;
+}
+.standardTable tr:nth-child(even), .standardTable .tr:nth-child(even){
+    background-color: white;
+}
+
+.standardTable .tr{
+    display:block;
+}
+.standardTable .tr .td, .standardTable .tr .th{
+    display: inline-block;
+}
+.standardTable .tr .td, .standardTable .tr .th, .standardTable .tr td, .standardTable .tr th{
+    word-break:break-word;
+}
+
+.col-ab-1{
+    width: 8.3333333%;
+}
+.col-ab-2{
+    width: 16.6666666%;
+}
+.col-ab-3{
+    width: 25%;
+}
+.col-ab-4{
+    width: 33.333333333%;
+}
+.col-ab-5{
+    width: 41.66666666%;
+}
+.col-ab-6{
+    width: 50%;
+}
+.col-ab-12{
+    width: 100%;
+}
