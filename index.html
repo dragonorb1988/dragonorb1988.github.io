@@ -195,82 +195,88 @@
 					</section>
 
 					<section class="grid_4 " id="my">
-						<h3>Someplace Somewhere</h3>
-						<img src="img/8.jpg" alt="Someplace Somewhere">
-					</section>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly</title>
+       
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/Content/icofont.css" rel="stylesheet">
+    <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <link href="http://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="~/Scripts/jquery-ui-touch-punch.js" crossorigin="anonymous"></script>
 
-					<section class="grid_4 omega" id="my">
-						<h3>Protoss Scout</h3>
-						<img src="img/9.jpg" alt="Protoss Scout">
-					</section>
+    <div class="container body-content">
+        <style>
+    .container {
+        width: 100%;
+    }
 
-					<section class="grid_4 alpha" id="my">
-						<h3>Terran Wraith</h3>
-						<img src="img/10.jpg" alt="Terran Wraith">
-					</section>
-					<section class="grid_4 alpha" id="my">
-						<h3>I,Me,Myself</h3>
-						<img src="img/11.jpg" alt="I,Me,Myself">
-					</section>
-				</div>
-				<div class="grid_12">
-					<section class="grid_6 alpha" id="youtubeclip">
-						<h3>Android vs Apple</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/H1QP1lj_Gbg" frameborder="0" allowfullscreen></iframe>
-					</section>
+    .navbar {
+        display: none;
+    }
 
-					<section class="grid_6 omega" id="youtubeclip">
-						<h3>Camera Tracking</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/VYC_ATkOILU" frameborder="0" allowfullscreen></iframe>
-					</section>
+    body, .container, .body-content {
+        padding: 0;
+    }
 
-					<section class="grid_6 alpha" id="youtubeclip">
-						<h3>Foam Sprayer</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/cQ-_UabxV_U" frameborder="0" allowfullscreen></iframe>
-					</section>
+    #Boards {
+        text-align: center;
+        vertical-align: middle;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
-					<section class="grid_6 omega" id="youtubeclip">
-						<h3>Flame Throwner</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/VYC_ATkOILU" frameborder="0" allowfullscreen></iframe>
-					</section>
+<link rel="stylesheet" href="~/Res/Board/Monopoly.css" />
+<link rel="stylesheet" href="~/Res/Board/standardTable.css" />
+<script src="~/Res/Board/Monopoly.js"></script>
+<script src="~/Res/Board/data.js"></script>
+<script>
 
-					<section class="grid_6 alpha" id="youtubeclip">
-						<h3>Apple Tornado</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/aEDkN4adQMY" frameborder="0" allowfullscreen></iframe>
-					</section>
+    var monopoly;
+    var utils;
 
-					<section class="grid_6 omega" id="youtubeclip">
-						<h3>EWU Animation</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/qIC_Kec3w3M" frameborder="0" allowfullscreen></iframe>
-					</section>
+    $(document).ready(function () {
 
-					<section class="grid_6 alpha" id="youtubeclip">
-						<h3>Anthropomorph</h3>
-						<iframe width="450" height="253" src="//www.youtube.com/embed/XKBIbuw_BXE" frameborder="0" allowfullscreen></iframe>
-					</section>
-			</article>
-			<div class="clear"></div>
-		</div>
-		<div id="footer">
-			<footer class="container">
-				<section class="grid_4 alpha">
-					<img src="img/phone.png">
-					<p>Phone: (000)000-0000</p>
-				</section>
-				<section class="grid_4 ">
-					<img src="img/email.png">
-					<p>dragonorb1988@yahoo.com</p>
-				</section>
-				<section class="grid_4 omega">
-					<a href="https://www.facebook.com/long.nguyen.5667">
-						<img src="img/facebook.png">
-						<p>Follow me on facebook</p>
-					</a>
-				</section>				
-			</footer>
-			<div class="clear"></div>
-		</div>			
-	
-  
+        monopoly = new Monopoly(cardObjs, $("#Boards"));
+        utils = new Utils();
+
+        monopoly.reset();
+        monopoly.start();
+
+        
+    })
+
+</script>
+
+<div id="Boards"></div>
+    </div>
+
+
 </body>
 </html>
