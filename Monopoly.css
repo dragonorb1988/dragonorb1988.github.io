@@ -1,0 +1,485 @@
+
+/***********************************************BOOSTRAP**************************************************************/
+.force-redraw::before { 
+    content: "" 
+}
+body{
+    background: -webkit-linear-gradient(hsl(34, 15%, 37%), hsl(34, 15%, 47%),hsl(34, 15%, 37%));
+}
+
+.table{
+    /*margin-top: 5px;*/
+    margin-bottom: 0;
+    padding-top:0;
+    padding-bottom: 0;
+}
+/***********************************************CARD**************************************************************/
+
+.card{
+    border-radius: 5px;
+    border: 1px solid #ccc;    
+    display: inline-block;
+    position: relative;
+}
+
+.card .card-inner-container{
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+}
+.card-inner-container.size-xs{
+    width: 5.5em;
+    height: 6em;
+}
+.card-inner-container.size-sm{
+    width: 7em;
+    height: 6em;
+}
+.card-inner-container.size-md {
+    width: 7.5em;
+    height: 6.5em;
+}
+.card-inner-container.size-lg{
+    width: 8em;
+    height: 7em;
+} 
+.card-inner-container.size-xlg{
+    width: 9em;
+    height: 8em;
+}
+.card-inner-container.size-xxlg{
+    width: 9em;
+    height: 9em;
+}
+
+.card-header-container, 
+.card-body-container, 
+.card-footer-container{
+    overflow: hidden;
+}
+
+
+.card-inner-container .card-avatar-container{
+    position: absolute;
+    top: 70%;
+    width: 100%;
+}
+.card-inner-container .card-avatar-container.size-xs{
+    font-size:0.7em
+}
+
+
+/***********************************************PROPERTY CARD**************************************************************/
+.my-turn-signal{
+    background-color: aliceblue;
+    color: black;
+}
+
+.my-turn-signal .player-info-name, .my-turn-signal .player-info-money{
+    color: black !important;
+}
+
+.card-header-container.card-property{
+    height: 18%
+}
+.card-header-container.card-property.size-xs{
+    font-size: 0.8em;
+}
+.card-header-container.card-property.size-xs, 
+.card-header-container.card-property.size-sm, 
+.card-header-container.card-property.size-md,
+.card-header-container.card-property.size-lg,
+.card-header-container.card-property.size-xlg{
+    height: 18%
+}
+
+
+.card-body-container.card-property{
+    height: 60%
+}
+.card-body-container.card-property.size-xs{
+    font-size:0.65em;
+}
+.card-body-container.card-property.size-xs, 
+.card-body-container.card-property.size-sm, 
+.card-body-container.card-property.size-md,
+.card-body-container.card-property.size-lg,
+.card-body-container.card-property.size-xlg{
+    height: 60%
+}
+
+.card-footer-container.card-property.size-xs{
+    font-size: 0.7em;
+}
+
+
+.card-header-container.card-property table{
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/***********************************************GO CARD**************************************************************/
+
+
+.card-header-container.card-go{
+    height: 50%
+}
+.card-header-container.card-go.size-xs{
+    font-size: 0.6em;
+}
+.card-header-container.card-go.size-xs, 
+.card-header-container.card-go.size-sm, 
+.card-header-container.card-go.size-md,
+.card-header-container.card-go.size-lg,
+.card-header-container.card-go.size-xlg{
+    height: 50%
+}
+
+.card-body-container.card-go{
+    height: 30%
+}
+.card-body-container.card-go.size-xs{
+    font-size: 1em;
+}
+.card-body-container.card-go.size-xs, 
+.card-body-container.card-go.size-sm, 
+.card-body-container.card-go.size-md,
+.card-body-container.card-go.size-lg,
+.card-body-container.card-go.size-xlg{
+    height: 30%
+}
+
+.card-footer-container.card-go.size-xs{
+    font-size: 0.7em;
+}
+
+/***********************************************LOCATION CARD**************************************************************/
+
+
+.card-header-container.card-location{
+    height: 10%
+}
+
+.card-header-container.card-location.size-xs, 
+.card-header-container.card-location.size-sm, 
+.card-header-container.card-location.size-md,
+.card-header-container.card-location.size-lg,
+.card-header-container.card-location.size-xlg{
+    height: 10%
+}
+
+.card-body-container.card-location{
+    height: 60%
+}
+.card-body-container.card-location.size-xs{
+    font-size: 1.5em;
+}
+.card-body-container.card-location.size-xs, 
+.card-body-container.card-location.size-sm, 
+.card-body-container.card-location.size-md,
+.card-body-container.card-location.size-lg,
+.card-body-container.card-location.size-xlg{
+    height: 60%
+}
+
+/***********************************************EVENT CARD**************************************************************/
+
+
+.card-header-container.card-event{
+    height: 20%
+}
+
+.card-header-container.card-event.size-xs, 
+.card-header-container.card-event.size-sm, 
+.card-header-container.card-event.size-md,
+.card-header-container.card-event.size-lg,
+.card-header-container.card-event.size-xlg{
+    height: 20%
+}
+
+.card-body-container.card-event{
+    height: 60%
+}
+.card-body-container.card-event.size-xs{
+    font-size: 1.5em;
+}
+.card-body-container.card-event.size-xs, 
+.card-body-container.card-event.size-sm, 
+.card-body-container.card-event.size-md,
+.card-body-container.card-event.size-lg,
+.card-body-container.card-event.size-xlg{
+    height: 60%
+}
+
+/***********************************************GOTOJAIL CARD**************************************************************/
+
+
+.card-header-container.card-goToJail{
+    height: 20%
+}
+.card-header-container.card-goToJail.size-xs{
+    font-size: 0.7em;
+}
+.card-header-container.card-goToJail.size-xs, 
+.card-header-container.card-goToJail.size-sm, 
+.card-header-container.card-goToJail.size-md,
+.card-header-container.card-goToJail.size-lg,
+.card-header-container.card-goToJail.size-xlg{
+    height: 20%
+}
+
+.card-body-container.card-goToJail.size-xs{
+    font-size: 2em;
+}
+.card-body-container.card-goToJail{
+    height: 60%
+}
+.card-body-container.card-goToJail.size-xs, 
+.card-body-container.card-goToJail.size-sm, 
+.card-body-container.card-goToJail.size-md,
+.card-body-container.card-goToJail.size-lg,
+.card-body-container.card-goToJail.size-xlg{
+    height: 60%
+}
+
+.card-footer-container.card-goToJail.size-xs{
+    font-size: 0.7em;
+}
+/***********************************************INJAIL CARD**************************************************************/
+
+
+.card-header-container.card-inJail{
+    height: 20%
+}
+.card-header-container.card-inJail.size-xs{
+    font-size:0.7em;
+}
+.card-header-container.card-inJail.size-xs, 
+.card-header-container.card-inJail.size-sm, 
+.card-header-container.card-inJail.size-md,
+.card-header-container.card-inJail.size-lg,
+.card-header-container.card-inJail.size-xlg{
+    height: 20%
+}
+
+.card-body-container.card-inJail{
+    height: 40%;
+    border-bottom: 1px solid #ccc;
+}
+.card-body-container.card-inJail.size-xs{
+    font-size: 1em;
+}
+.card-body-container.card-inJail.size-xs, 
+.card-body-container.card-inJail.size-sm, 
+.card-body-container.card-inJail.size-md,
+.card-body-container.card-inJail.size-lg,
+.card-body-container.card-inJail.size-xlg{
+    height: 40%
+}
+
+.card-body-container.card-inJail .jail-container{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    
+}
+.card-body-container.card-inJail .jail-container .player-avatar-main{
+    font-size: 1em ;
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 2px black;
+}
+
+
+.card-footer-container.card-inJail.size-xs{
+    font-size: 0.7em;
+}
+
+/***********************************************FREEPARKING CARD**************************************************************/
+
+
+.card-header-container.card-freeParking{
+    height: 20%
+}
+.card-header-container.card-freeParking.size-xs{
+    font-size: 0.7em;
+}
+.card-header-container.card-freeParking.size-xs, 
+.card-header-container.card-freeParking.size-sm, 
+.card-header-container.card-freeParking.size-md,
+.card-header-container.card-freeParking.size-lg,
+.card-header-container.card-freeParking.size-xlg{
+    height: 20%
+}
+
+.card-body-container.card-freeParking{
+    height: 60%
+}
+.card-body-container.card-freeParking.size-xs{
+    font-size: 1.2em;
+}
+.card-body-container.card-freeParking.size-xs, 
+.card-body-container.card-freeParking.size-sm, 
+.card-body-container.card-freeParking.size-md,
+.card-body-container.card-freeParking.size-lg,
+.card-body-container.card-freeParking.size-xlg{
+    height: 60%
+}
+
+.card-footer-container.card-freeParking.size-xs{
+    font-size: 0.7em;
+}
+
+/********************************PLAYER**************************************************************************/
+
+.player-avatar-main{
+    margin: auto;
+    text-shadow: 0 0 2px white;
+}
+
+/********************************BOARD**************************************************************************/
+
+.windowDice-container{
+    border: 2px solid #ccc;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1em;
+}
+.dice-cube{
+    margin: auto;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 3em;
+    font-weight: bolder;
+    margin-right: 0.5em;
+    color: aliceblue;    
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+
+
+
+
+
+
+
+/********************************COLOR, FONT**************************************************************************/
+.button-disable{
+    pointer-events: none !important;
+    background: #ccc !important;
+    cursor: not-allowed !important;
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
+.gradient-golden-text{        
+    color:hsl(53, 84%, 51%);
+    background: -webkit-linear-gradient(hsl(60, 88%, 89%), hsl(53, 84%, 51%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+.gradient-golden-background{        
+    background: -webkit-linear-gradient(hsl(60, 88%, 89%), hsl(53, 84%, 51%)); 
+}
+.golden-text{
+    color:hsl(53, 84%, 51%);
+}
+
+.gradient-blue-text{
+    color:hsl(181, 84%, 51%);
+    background: -webkit-linear-gradient(hsl(181, 84%, 51%), hsl(181, 84%, 90%), hsl(181, 84%, 40%),hsl(181, 84%, 81%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+.gradient-blue-background{
+    background: -webkit-linear-gradient(hsl(181, 84%, 40%), hsl(181, 84%, 30%),hsl(181, 84%, 20%));
+}
+.blue-text{
+    color:hsl(181, 84%, 51%);
+}
+
+.gradient-red-text{
+    color:hsl(0, 87%, 31%);
+    background: -webkit-linear-gradient(hsl(0, 87%, 31%), hsl(0, 87%, 51%), hsl(0, 87%, 41%),hsl(0, 87%, 31%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+.red-text{
+    color:hsl(0, 87%, 31%);
+}
+
+.gradient-black-background{        
+    background: -webkit-linear-gradient(hsl(0,0%,16.9%), hsl(0, 0%, 0.4%), hsl(0, 0%, 15.9%),  hsl(0, 0%, 30.2%)); 
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.font-bolder{
+    font-weight: bolder;
+}
+
+.font-italic{
+    font-style: italic;
+}
+
+.circle-container{
+    border: 2px solid black;
+    border-radius: 50%;   
+    text-align: center;
+    width: 30%;
+}
+
+.font-size-xxs{
+    font-size:0.3em;
+}
+.font-size-xs{
+    font-size:0.5em;
+}
+.font-size-sm{
+    font-size:0.7em;
+}
+.font-size-1x{
+    font-size: 1em;
+}
+.font-size-1x5{
+    font-size: 1.5em;
+}
+.font-size-2x{
+    font-size: 2em;
+}
+.font-size-3x{
+    font-size: 3em;
+}
