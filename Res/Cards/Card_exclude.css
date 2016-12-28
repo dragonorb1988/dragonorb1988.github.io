@@ -1,0 +1,419 @@
+﻿body{
+    background: -webkit-linear-gradient(hsl(34, 15%, 37%), hsl(34, 15%, 47%),hsl(34, 15%, 37%));
+}
+
+/*************************Card***************************************/
+.table{
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-top:0;
+    padding-bottom: 0;
+}
+.card{
+    border-radius: 5px;
+    /*padding: 0.5em;*/
+    border: 1px solid #ccc;    
+    display: inline-block;
+    position: relative;
+    /*margin: 5px;*/
+}
+.card .card-inner-container{
+    /*width: 20em;
+    height: 20em;*/
+    width: 10em;
+    height: 7.5em;
+    overflow: hidden;
+}
+.card .card-inner-container .card-footer-container,
+.card .card-inner-container .card-header-container,
+.card .card-inner-container .card-body-container{
+    display: block;
+    width: 100%;
+    text-align:center;
+    vertical-align:middle;
+    overflow: hidden;
+}
+
+.gradient-golden-text{        
+    color:hsl(53, 84%, 51%);
+    background: -webkit-linear-gradient(hsl(60, 88%, 89%), hsl(53, 84%, 51%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+.gradient-golden-background{        
+    background: -webkit-linear-gradient(hsl(60, 88%, 89%), hsl(53, 84%, 51%)); 
+}
+.golden-text{
+    color:hsl(53, 84%, 51%);
+}
+
+.gradient-blue-text{
+    color:hsl(181, 84%, 51%);
+    background: -webkit-linear-gradient(hsl(181, 84%, 51%), hsl(181, 84%, 90%), hsl(181, 84%, 40%),hsl(181, 84%, 81%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+.gradient-blue-background{
+    background: -webkit-linear-gradient(hsl(181, 84%, 40%), hsl(181, 84%, 30%),hsl(181, 84%, 20%));
+}
+.blue-text{
+    color:hsl(181, 84%, 51%);
+}
+
+.gradient-red-text{
+    color:hsl(0, 87%, 31%);
+    background: -webkit-linear-gradient(hsl(0, 87%, 31%), hsl(0, 87%, 51%), hsl(0, 87%, 41%),hsl(0, 87%, 31%));
+    
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; 
+    -o-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; 
+    text-fill-color: transparent; 
+}
+red-text{
+    color:hsl(0, 87%, 31%);
+}
+
+.gradient-black-background{        
+    background: -webkit-linear-gradient(hsl(0,0%,16.9%), hsl(0, 0%, 0.4%), hsl(0, 0%, 15.9%),  hsl(0, 0%, 30.2%)); 
+}
+
+.text-xxlarge-bolder{
+    font-weight:bolder;
+    /*font-size: xx-large;*/
+}
+.text-xlarge-bolder{
+    font-weight:bolder;
+    /*font-size: x-large;*/
+}
+.text-large-bolder{
+    font-weight:bolder;
+    /*font-size: large;*/
+}
+
+.text-circle{
+    border: 2px solid black;
+    border-radius: 50%;
+    /*width: 60px;
+    height: 60px;*/
+    text-align: center;
+    width: 30%;
+    height: 5%;
+}
+
+/*************************Location Card***************************************/
+.card-header-container.card-location{
+    /*height: 3em;*/
+    height: 15%
+}
+.card-body-container.card-location{
+    /*height: 12em;*/
+    height: 60%
+}
+.card-footer-container.card-location{
+}
+
+/*************************Event Card***************************************/
+.card-header-container.card-event{
+    /*height: 3em;*/
+    height: 15%;
+}
+.card-body-container.card-event{
+    /*height: 15em;*/
+    height: 75%;
+    font-size: 5.5em;
+}
+.card-footer-container.card-event{
+    /*height: 5em;*/
+}
+
+/*************************Go Card***************************************/
+.card-header-container.card-go{
+    /*height: 3em;*/
+    height: 35%
+}
+.card-body-container.card-go{
+    /*height: 10em;*/
+    height: 35%;
+    font-size: 2em
+}
+.card-footer-container.card-go{
+    /*height: 5em;*/
+}
+
+/*************************FreeParking Card***************************************/
+
+.card-header-container.card-freeparking{
+    /*height: 3em;*/
+    height: 15%
+}
+.card-body-container.card-freeparking{
+    /*height: 10em;*/
+    height: 50%
+}
+.card-footer-container.card-freeparking{
+    /*height: 5em;*/
+}
+
+/*************************GoToJail Card***************************************/
+
+.card-header-container.card-goToJail{
+    /*height: 3em;*/
+    height: 15%
+}
+.card-body-container.card-goToJail{
+    /*height: 10em;*/
+    height: 50%
+}
+.card-footer-container.card-goToJail{
+    /*height: 5em;*/
+}
+
+/*************************GoToJail Card***************************************/
+
+.card-header-container.card-inJail{
+    height: 0;
+}
+.card-body-container.card-inJail{
+    /*height: 15em;*/
+    height: 75%
+}
+.card-footer-container.card-inJail{
+    /*height: 5em;*/
+}
+
+/*************************Property Card***************************************/
+.card-header-container.card-property{
+    /*height: 5em;*/
+    height: 18%
+}
+.card-body-container.card-property{
+    /*height: 10em;*/
+    height: 60%
+}
+.card-footer-container.card-property{
+    /*height: 5em;*/
+}
+.property-header-table{
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    /*margin-top: 1em;*/
+}
+
+
+/*************************Board***************************************/
+
+.monopoly-board{
+    margin: auto;
+}
+
+.control-area-container{
+    position: absolute !important;
+    top: 15%;
+    left: 15%;
+}
+
+.player-avatar.fa{
+    text-shadow: 0px 0px 2px white;
+    margin-left: 5px;
+}
+
+/*************************Draggable-container***************************************/
+
+.draggable-area-container{
+    min-width: 100px;
+    max-width: 300px;
+    display: inline-block;
+    margin: 1em;
+}
+.draggable-area-container .panel-heading{
+    cursor:pointer;
+}
+.draggable-area-container .panel-heading table tr th, .draggable-area-container .panel-body table tr th{
+    text-align:left;
+    padding-left: 10px;
+}
+.draggable-area-container .panel-heading table tr td, .draggable-area-container .panel-body table tr td{
+    text-align:right;
+    padding-left: 10px;
+}
+.draggable-area-container .panel-heading table tr td .fa{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+/*************************Dice-container***************************************/
+.dice-container{
+    margin: 0.2em;
+    /*width: 50px;
+    height: 50px;*/
+    border: 3px solid #ccc;
+    border-radius: 7px;
+    display: inline-block;
+    font-size: 1em;
+    font-weight:bolder;
+}
+
+
+/*************************Media Screen***************************************/
+
+/*Ipad*/
+@media screen and (min-height: 704px) and (min-width: 1024px) {
+    /*body{
+        line-height: 1.2;
+    }*/
+    .card .card-inner-container{   
+        width: 5.5em;
+        height: 6em;
+    }
+
+    .text-xxlarge-bolder, .text-xlarge-bolder, .text-large-bolder{
+        font-size: 0.65em;
+    }
+
+    .card-body-container.card-event{
+        font-size: 2em;
+        text-shadow: 0px 0px 1px hsl(53, 84%, 51%);
+    }
+    
+    .card-header-container.card-go{
+        font-size: 0.5em;
+    }
+    .card-body-container.card-go{
+        font-size: 1.5em
+    }   
+    .card-footer-container.card-go{
+        font-size: 1em;
+    }
+
+    .card-body-container.card-location{
+        font-size: 2em
+    }  
+    
+    .card-body-container.card-inJail{
+        font-size: 0.7em;
+    }
+        
+    .card-body-container.card-property{
+        height: 60%;
+    }
+
+    .card-footer-container.card-property{
+        font-size: 12pt;
+    }
+
+    .card-body-container.card-property table{
+        margin-top: 0;
+    }
+    
+    /*.draggable-area-container{
+        width: 60%
+    }*/
+    .card-body-container.card-freeparking{
+        font-size: 2em;
+    }
+
+    .card-body-container.card-goToJail{
+        font-size: 2em;
+    }
+
+    .player-avatar.fa {
+        font-size: 1em;
+    }
+}
+
+
+/*Computer*/
+@media screen and (min-height: 970px) {
+    /*body{
+        line-height: 1.42857143
+    }*/
+    .card .card-inner-container{   
+        width: 10em;
+        height: 8em;
+    }
+
+    .text-xxlarge-bolder, .text-xlarge-bolder, .text-large-bolder{
+        font-size: 1em;
+    }
+
+    .card-body-container.card-event{
+        font-size: 4em;
+        text-shadow: 2px 2px 2px hsl(53, 84%, 51%);
+    }
+
+    .card-header-container.card-go{
+        font-size: 1em;
+    }
+    .card-body-container.card-go{
+        font-size: 2em
+    }   
+    .card-footer-container.card-go{
+        font-size: 1.5em;
+    }
+
+    .card-body-container.card-location{
+        font-size: 4em
+    }  
+
+    .card-body-container.card-inJail{
+        font-size: 1em;
+    }
+
+    .card-footer-container.card-property{
+        font-size: 1em;
+    }
+    .card-body-container.card-property table{
+        margin-top: 5px;
+    }
+    /*.draggable-area-container{
+        width: 300px
+    }*/
+    .card-body-container.card-freeparking{
+        font-size: 3em;
+    }
+
+    .card-body-container.card-goToJail{
+        font-size: 3em;
+    }
+
+    .player-avatar.fa {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-height: 1070px) {
+    .card .card-inner-container{   
+        width: 10em;
+        height: 9em;
+    }
+}
+
+@media screen and (min-height: 1100px) {
+    .card .card-inner-container{   
+        width: 10em;
+        height: 9.3em;        
+    }
+}
