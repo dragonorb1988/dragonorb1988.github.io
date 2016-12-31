@@ -1,4 +1,7 @@
-﻿var cardObjs = [
+﻿var cardObjs = {
+
+properties:[    
+//#region Porperty
         {
             type: "go card",
             money: 200
@@ -355,18 +358,25 @@
             color: { h: 223, s: 80, l: 20 },
             money: 400
         },
-        {
-            type: "board",
-            width: 12,
-            height: 8,
-            dice: 2
-        },
+
+//#endregion Property
+],
+
+board:{
+        type: "board",
+        width: 12,
+        height: 8,
+        dice: 2
+},
+
+players :[
+//#region Player
         {
             type: "player",
             controller: "player",
-            name: "Long",
-            avatar: "icofont icofont-rocket-alt-1",
-            color: { h: 25, s: 100, l: 50 },
+            name: "player",
+            avatar: "icofont icofont-king-crown",
+            color: { h: 0, s: 100, l: 50 },
             money: 1500
 
         },
@@ -374,27 +384,34 @@
             type: "player",
             controller: "computer",
             name: "computer 1",
-            avatar: "icofont icofont-airplane",
-            color: { h: 45, s: 100, l: 50 },
+            avatar: "icofont icofont-paralysis-disability",
+            color: { h: 180, s: 100, l: 50 },
             money: 1500
         },
         {
             type: "player",
             controller: "computer",
             name: "computer 2",
-            avatar: "icofont icofont-auto-rickshaw",
-            color: { h: 12, s: 100, l: 50 },
+            avatar: "icofont icofont-golf-cart",
+            color: { h: 320, s: 100, l: 50 },
             money: 1500
         },
         {
             type: "player",
             controller: "computer",
             name: "computer 3",
-            avatar: "icofont icofont-bicycle-alt-2",
-            color: { h: 75, s: 100, l: 50 },
+            avatar: "icofont icofont-toy-duck",
+            color: { h: 93, s: 100, l: 50 },
             money: 1500
-        },
+        }
 
+//#endregion Player
+],
+
+events:[
+//#region Event
+
+        //onePropertyRaiseNeighborsFall_oneLevel
         {
             type: "event",
             title: "It's a boy",
@@ -409,6 +426,8 @@
             description: ["Select one of your property.", "(Rent level jumps to +1 for you; drop -1 for your neighbors)"],
             eventType: "onePropertyRaiseNeighborsFall_oneLevel"
         },
+
+        //locationEffect
         {
             type: "event",
             title: "Boom Town",
@@ -418,24 +437,35 @@
         },
         {
             type: "event",
+            title: "Deal of the week",
+            longTitle: "Word on the street says the market is booming!",
+            description: ["Move to any property space", "You can buy it or raise rent level"],
+            eventType: "locationEffect"
+        },
+        {
+            type: "event",
+            title: "Stop the presses",
+            longTitle: "Get the lowdown on a hot property",
+            description: ["Move to any property space", "You can buy it or raise rent level"],
+            eventType: "locationEffect"
+        },
+
+        //goToCard_freeParking
+        {
+            type: "event",
             title: "Total Gridlock",
             longTitle: "Faulty traffic lights get the street in a jam!",
             description: ["All player go to freeparking", "Do not pass GO!", "If you are in Jail, stay there!"],
             eventType: "goToCard_freeParking"
         },
+
+        //onePropertyRaise_oneLevel
         {
             type: "event",
             title: "Crime Down",
             longTitle: "Police arrest local newspaper thief",
             description: ["Select one of you property to level up"],
             eventType: "onePropertyRaise_oneLevel"
-        },
-        {
-            type: "event",
-            title: "Demolished",
-            longTitle: "Your builder get the wrong address",
-            description: ["Select one of you property to level down"],
-            eventType: "onePropertyFall_oneLevel"
         },
         {
             type: "event",
@@ -446,17 +476,124 @@
         },
         {
             type: "event",
-            title: "Grand designs",
-            longTitle: "One of your properties get a TV makeover!",
-            description: ["Select one of you property to level up: max level"],
-            eventType: "onePropertyRaise_maxLevel"
+            title: "What a ride",
+            longTitle: "Your local theme park builds the world's craziest roller-coaster!",
+            description: ["Select one of you property to level up"],
+            eventType: "onePropertyRaise_oneLevel"
         },
         {
             type: "event",
-            title: "Deal of the week",
-            longTitle: "Word on the street says the market is booming!",
-            description: ["Move to any property space", "You can buy it or raise rent level"],
-            eventType: "locationEffect"
+            title: "On the map",
+            longTitle: "The new railway station gets the go-ahead",
+            description: ["Select one of you property to level up"],
+            eventType: "onePropertyRaise_oneLevel"
         },
 
-];
+        //onePropertyFall_oneLevel
+        {
+            type: "event",
+            title: "Demolished",
+            longTitle: "Your builder get the wrong address",
+            description: ["Select one of you property to level down"],
+            eventType: "onePropertyFall_oneLevel"
+        },
+        {
+            type: "event",
+            title: "'Tis the season",
+            longTitle: "You caught that nasty cough going around",
+            description: ["Select one of you property to level down"],
+            eventType: "onePropertyFall_oneLevel"
+        },
+        {
+            type: "event",
+            title: "Eww! What is that smell",
+            longTitle: "The local sewer springs a leak",
+            description: ["Select one of you property to level down"],
+            eventType: "onePropertyFall_oneLevel"
+        },
+
+        //onePropertyRaise_maxLevel
+        {
+            type: "event",
+            title: "Grand designs",
+            longTitle: "One of your properties get a TV makeover!",
+            description: ["Select one of you property to level up:"," max level"],
+            eventType: "onePropertyRaise_maxLevel"
+        },
+        
+        //moneyCost_50_eachProperty
+        {
+            type: "event",
+            title: "Highway Tax",
+            longTitle: "Your roeads need repairs!",
+            description: ["Each property you owned will cost $50"],
+            eventType: "moneyCost_50_eachProperty"
+        },
+
+        //onePropertyFall_minLevel
+        {
+            type: "event",
+            title: "Rover's Revenge",
+            longTitle: "Your pet pooch poops on someone's patio",
+            description: ["Select one of you property to level down:"," min level"],
+            eventType: "onePropertyFall_minLevel"
+        },
+        {
+            type: "event",
+            title: "Tornado Alley",
+            longTitle: "Hey, where did the roof go?",
+            description: ["Select one of you property to level down:", " min level"],
+            eventType: "onePropertyFall_minLevel"
+        },
+
+        //onePropertySwap
+        {
+            type: "event",
+            title: "In the money",
+            longTitle: "Spend your lottery millions! Swap another player's property with one of yours",
+            description: ["Select one of you property","and another player property to swap"],
+            eventType: "onePropertySwap"
+        },
+        {
+            type: "event",
+            title: "Haunted House",
+            longTitle: "Something strange is going on! Swap another player's property with one of yours",
+            description: ["Select one of you property", "and another player property to swap"],
+            eventType: "onePropertySwap"
+        },
+
+        //moneyGain_200_withAnother
+        {
+            type: "event",
+            title: "Wibble Wobble",
+            longTitle: "Sit in a bath of jelly with a friend for charity",
+            description: ["Select another player","both of you will get $200"],
+            eventType: "moneyGain_200_withAnother"
+        },
+        {
+            type: "event",
+            title: "Loves is in the air",
+            longTitle: "Meet someone special right on your street",
+            description: ["Select another player", "both of you will get $200"],
+            eventType: "moneyGain_200_withAnother"
+        },
+        
+        
+        //goToJail_onePlayer
+        {
+            type: "event",
+            title: "Pick your own",
+            longTitle: "Catch someone stealing your prize tomatoes!",
+            description: ["Select another player","and send that player to jail"],
+            eventType: "goToJail_onePlayer"
+        },
+        
+        
+        
+        
+        
+
+//#endregion Event
+]
+    
+};
