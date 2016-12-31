@@ -60,31 +60,176 @@
         height: 100%;
     }
 </style>
-<link rel="stylesheet" href="/Res/Board/Monopoly.css" />
-<link rel="stylesheet" href="/Res/Board/standardTable.css" />
-<script src="/Res/Board/Monopoly.js"></script>
-<script src="/Res/Board/data.js"></script>
+<link rel="stylesheet" href="~/Res/Board/Monopoly.css" />
+<link rel="stylesheet" href="~/Res/Board/standardTable.css" />
+<script src="~/Res/Board/Monopoly.js"></script>
+<script src="~/Res/Board/data.js"></script>
+<script src="~/Res/Board/MonopolySetup.js"></script>
 <script>
 
+    //God class variable
     var monopoly;
     var utils;
+    var monopolyObjects = {};
+    var playerTable;
+
 
     $(document).ready(function () {
 
-        monopoly = new Monopoly(cardObjs, $("#Boards"));
+        if (typeof (Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+            var monopolyProperties = localStorage.getItem("monopolyProperties");
+            if (monopolyProperties) {
+                monopolyProperties = JSON.parse(monopolyProperties);
+            } else {
+                localStorage.setItem("monopolyProperties", JSON.stringify(cardObjs.properties));
+                monopolyProperties = cardObjs.properties;
+            }
+
+            var monopolyPlayers = localStorage.getItem("monopolyPlayers");
+            if (monopolyPlayers) {
+                monopolyPlayers = JSON.parse(monopolyPlayers);
+            } else {
+                localStorage.setItem("monopolyPlayers", JSON.stringify(cardObjs.players));
+                monopolyPlayers = cardObjs.players;                
+            }
+
+            var monopolyBoard = localStorage.getItem("monopolyBoard");
+            if (monopolyBoard) {
+                monopolyBoard = JSON.parse(monopolyBoard);
+            } else {
+                localStorage.setItem("monopolyBoard", JSON.stringify(cardObjs.board));
+                monopolyBoard = cardObjs.board;
+            }
+
+            var monopolyEvents = localStorage.getItem("monopolyEvents");
+            if (monopolyEvents) {
+                monopolyEvents = JSON.parse(monopolyEvents);
+            } else {
+                localStorage.setItem("monopolyEvents", JSON.stringify(cardObjs.events));
+                monopolyEvents = cardObjs.events;
+            }
+
+            monopolyObjects = {
+                properties: monopolyProperties,
+                board: monopolyBoard,
+                players: monopolyPlayers,
+                events: monopolyEvents
+            }
+
+        }
+
+        $(".btn-animation").on("click", function (event) {
+            var self = $(event.currentTarget);
+            if (self.hasClass("btn-slow"))
+                monopoly.setAnimationSpeed(1000);
+            else if (self.hasClass("btn-medium"))
+                monopoly.setAnimationSpeed(500);
+            else if (self.hasClass("btn-fast"))
+                monopoly.setAnimationSpeed(250);
+            else if (self.hasClass("btn-faster"))
+                monopoly.setAnimationSpeed(50);
+        })
+
+        $(".menu-trigger").on("click", function (event) {
+            var self = $(event.currentTarget);
+            $(".panel-main-menu").show();
+            self.hide();
+        })
+
+        $(".panel-main-menu-close").on("click", function (event) {
+            $(".panel-main-menu").hide();
+            $(".menu-trigger").show();
+        })
+        $(".panel-main-menu").draggable({ handler: ".panel-main-menu-heading" })
+
+       
+        $(".btn-add-player").on("click", function () {
+            playerTable.add_player();
+        })
+
+        $(".btn-save-player").on("click", function () {
+            monopolyObjects.players = playerTable.export();
+            localStorage.setItem("monopolyPlayers", JSON.stringify(monopolyObjects.players));
+            monopolyPlayers = monopolyObjects.players;
+            monopoly.reset();
+        })
+
+        if (monopolyObjects.players.length > 0) {
+            playerTable = new PlayerContainerTable();
+            playerTable.initial();
+            playerTable.import(monopolyObjects.players);
+            playerTable.prependTo($("#players-tab .menu-section"))
+        }
+
+        monopoly = new Monopoly(monopolyObjects, $("#Boards"));
         utils = new Utils();
-
         monopoly.reset();
-        monopoly.start();
 
-        
     })
 
 </script>
 
-<div id="Boards"></div>
+<div style="width: 100%; height: 5px; background-color: rgba(0,0,0, 0.5)"></div>
+<div class="menu-trigger fa fa-bars cursor-pointer"
+     style=""></div>
+<div class="panel panel-primary panel-main-menu" style="position: absolute; top: 1em; left: 1em; min-width: 300px; z-index:100; display: none">
+    <div class="panel-heading panel-main-menu-heading cursor-pointer">
+        <span>Menu</span>
+        <span style="float:right" class="panel-main-menu-close ">&times;</span>
     </div>
+    <div class="panel-body">
 
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#players-tab">Players</a></li>
+            <li><a data-toggle="tab" href="#properties-tab">Properties</a></li>
+            <li><a data-toggle="tab" href="#events-tab">Events</a></li>
+            <li><a data-toggle="tab" href="#miscellaneous-tab">Miscellaneous</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="players-tab" class="tab-pane fade in active">
+                <h3>Players</h3>
+                <div class="menu-section">
+                    
+
+                    <button class="btn btn-default btn-add-player">Add</button>
+                    <button class="btn btn-primary btn-save-player">Save</button>
+                </div>
+            </div>
+
+            <div id="properties-tab" class="tab-pane fade">
+                <h3>Properties</h3>
+                <div class="menu-section">
+                    Comming soon
+                </div>
+            </div>
+
+            <div id="events-tab" class="tab-pane fade">
+                <h3>Events</h3>
+                <div class="menu-section">
+                    Comming soon
+                </div>
+            </div>
+
+            <div id="miscellaneous-tab" class="tab-pane fade">
+                <h3>Miscellaneous</h3>
+                <hr />
+                <div class="menu-section">
+                    <h4>Animation</h4>
+                    <button class="btn btn-default btn-animation btn-slow">Slow</button>
+                    <button class="btn btn-default btn-animation btn-medium">Medium</button>
+                    <button class="btn btn-default btn-animation btn-fast">Fast</button>
+                    <button class="btn btn-default btn-animation btn-faster">Faster</button>
+                </div>
+                <hr />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="Boards"></div>
 
 </body>
 
